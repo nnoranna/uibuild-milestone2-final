@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+  a{
+    text-decoration: none;
+  }
+  a img {
+    border: none;
+  }
+  
+  button,
+  a {
+    cursor: pointer;
+    color: inherit;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button,
+  textarea,
+  select {
+    appearance: none !important;
+    border-radius: 0;
+  }
+
+  /*---------------END OF CSS RESET----------------*/
+
+body {
+    background-color: #F7E4D4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Set the viewport default size*/
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/*IF! it is a separate HTML tag - Title style and position*/
+/* h1 {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'EB Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #467745;
+} */
+
+/*#1 Media Query on Title*/
+/* @media (max-width:520px) {
+    h1 {
+        position: absolute;
+        left: 20px;
+        font-size: 36px;
+    }
+} */
+
+/* The style of the form, which is the container of the HTML elements*/
+
+#review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 480px;
+    height: auto;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    #review {
+        max-width: calc(100% - 40px);
+    };
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-family: 'EB Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #467745;
+}
+
+@media (max-width:520px) {
+    h1 {
+        align-self: flex-start;
+        font-size: 36px;
+    }
+}
+
+/*Tárgy input*/
+.subject {
+    width: 100%;
+    height: 64px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+/*Megjegyzés input*/
+.message {
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+::placeholder {
+    font-size: 16px;
+    font-weight: 600; /*originally it should be 500*/
+    color: #467745;
+    opacity: 0.65;
+}
+
+
+/*VERSION #2 Custom Checkbox from W3School*/
+/* Customize the label (the "custom-check" container) */
+.custom-check {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    cursor: initial;
+    font-size: 16px;
+    font-weight: 400;
+    color: #467745;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-wrap: normal;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .custom-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: white;
+  }
+  
+  /* On hover, add a faded green background color */
+  .custom-check:hover input ~ .checkmark {
+    background-color: #467745;
+    opacity: 0.35;
+  }
+  
+  /* When the checkbox is checked, add the green */
+  .custom-check input:checked ~ .checkmark {
+    background-color: #467745;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .custom-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator - pipa in the box */
+  .custom-check .checkmark:after {
+    left: 7px;
+    top: 2.4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*Original Label Text next to checkbox, regardless of which checkbox we use*/
+/* label {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #467745;
+    overflow-wrap: normal;
+}*/
+
+a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+/*The style of the button*/
+button {
+    margin-top: 40px;
+    width: 280px;
+    height: 80px;
+    border-radius: 50px;
+    background-color: #467745;
+    font-family: 'EB Garamond', serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #F7E4D4;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+
+
+/*------------------CHECKBOX HELL------------------*/
+/*Custom-style checkbox*/
+/* input[type="checkbox"]
+/* .checkbox */ /*{
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    appearance: none;
+    margin: 0;
+    border: 0.01em solid white;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+} */
+
+/* .checkbox {
+    height: 22px;
+    width: 22px;
+    background-color: #467745;
+    margin: 0;
+    border: 0.01em solid white;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+} */
+
+
+/* @media (max-width:520px) {
+    .checkbox {
+        align-self: flex-start;
+    }
+} 
+---------------------END OF PREVIOUS CHECKBOX---------------------*/
